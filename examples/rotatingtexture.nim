@@ -6,7 +6,7 @@
 # Requires SDL3.dll to run
 
 import std/os
-import sdl3
+import ../src/sdl3
 
 # We will use this renderer to draw into this window every frame.
 var
