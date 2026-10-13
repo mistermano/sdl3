@@ -47,6 +47,25 @@ brew install sdl3_image
 brew install sdl3_mixer
 ```
 
+## Windows
+
+With MSYS2
+
+### MinGWx86_64
+`pacman -Syu mingw-w64-x86_64-sdl3 mingw-w64-x86_64-sdl3-image mingw-w64-x86_64-sdl3-mixer mingw-w64-x86_64-sdl3-sound mingw-w64-x86_64-sdl3-ttf`
+
+### UCRT
+`pacman -Syu mingw-w64-ucrt-x86_64-sdl3 mingw-w64-ucrt-x86_64-sdl3-image mingw-w64-ucrt-x86_64-sdl3-mixer mingw-w64-ucrt-x86_64-sdl3-net mingw-w64-ucrt-x86_64-sdl3-sound  mingw-w64-ucrt-x86_64-sdl3-ttf`
+
+### CLANG
+`pacman -Syu mingw-w64-clang-x86_64-sdl3 mingw-w64-clang-x86_64-sdl3-image mingw-w64-clang-x86_64-sdl3-mixer mingw-w64-clang-x86_64-sdl3-net mingw-w64-clang-x86_64-sdl3-sound mingw-w64-clang-x86_64-sdl3-ttf`
+
+### Nim's MinGW
+If you installed MinGW through Nim's `finish.exe`, you will have to manually copy the `include` folder from SDL3, https://github.com/libsdl-org/SDL/tree/main/include/SDL3 , into its `include` folder.
+Assuming your Nim is installed at the `C:\` root, the SDL3 will be copied into `C:\nim\dist\mingw64\include`, such that you can access `C:\nim\dist\mingw64\include\SDL3` and see the header files in there.
+
+In order to run programs compiled for Windows, `SDL3.dll` must be within the same folder as the .exe.
+
 ## Other OSes
 
 To be determined.
