@@ -1,4 +1,4 @@
-# Based on SDL 3.4.16
+# Based on SDL 3.4.18
 
 when defined(emscripten):
   const LibName* = "libSDL3.so"
@@ -2954,6 +2954,7 @@ type
     GAMEPAD_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT,
     GAMEPAD_TYPE_NINTENDO_SWITCH_JOYCON_PAIR,
     GAMEPAD_TYPE_GAMECUBE,
+    GAMEPAD_TYPE_STEAM,
     GAMEPAD_TYPE_COUNT
 
   GamepadButton* {.size: sizeof(cint).} = enum
@@ -4890,6 +4891,8 @@ type
     timestamp*: uint64
     windowID*: WindowID
     which*: PenID
+    penState: PenInputFlags
+    deviceType: PenDeviceType
 
   PenMotionEvent* {.bycopy.} = object
     `type`*: EventType
